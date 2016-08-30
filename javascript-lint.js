@@ -24,7 +24,6 @@
   function validator(text, options) {
     if (!window.JSHINT) return [];
     JSHINT(text, options, options.globals);
-    console.log('JSHINT.data()', JSHINT.data());
     var result = [];
     var implieds = JSHINT.data().implieds;
     if (implieds) parseImplieds(implieds, result);
